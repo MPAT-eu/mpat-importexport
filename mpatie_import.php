@@ -20,6 +20,7 @@
  * Authors:
  * Aurelien David https://github.com/aureliendavid/
  * Jean-Claude Dufourd (jean-claude.dufourd@telecom-paristech.fr)
+ * Jean-Philippe Ruijs https://github.com/jeanphilipperuijs/
  **/
 namespace MPAT\ImportExport;
 
