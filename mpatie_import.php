@@ -543,20 +543,26 @@ function handle_options($opt) {
 
 	$css_post_id = -1;
 
-	if (isset($opt['custom_css'])) {
-		$css_post = wp_update_custom_css_post( $opt['custom_css'] );
-		if (isset($css_post->ID)) {
-			$css_post_id = $css_post->ID;
-		}
+    if (isset($opt['custom_css'])) {
+        $css_post = wp_update_custom_css_post( $opt['custom_css'] );
+        if (isset($css_post->ID)) {
+            $css_post_id = $css_post->ID;
+        }
 
-	}
+    }
 
-	if (isset($opt['theme_mods_mpat-theme'])) {
+    if (isset($opt['theme_mods_mpat-theme'])) {
 
-		$opt['theme_mods_mpat-theme']['custom_css_post_id'] = $css_post_id ;
-		update_option('theme_mods_mpat-theme', $opt['theme_mods_mpat-theme'] );
+        $opt['theme_mods_mpat-theme']['custom_css_post_id'] = $css_post_id ;
+        update_option('theme_mods_mpat-theme', $opt['theme_mods_mpat-theme'] );
 
-	}
+    }
+
+    if (isset($opt['mpat_application_manager'])) {
+
+        update_option('mpat_application_manager', $opt['mpat_application_manager'] );
+
+    }
 
 }
 

@@ -130,8 +130,11 @@ function addOptions(&$pages) {
             $opt['custom_css'] = $css;
     }
 
-    if (count($opt)) {
+    $val = get_option('mpat_application_manager');
+    if ($val)
+        $opt['mpat_application_manager'] = $val;
 
+    if (count($opt)) {
         $pages[] = array("options" => $opt);
     }
 
